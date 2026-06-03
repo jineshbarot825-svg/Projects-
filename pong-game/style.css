@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #00ff88;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #00ff88;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #00ff88;
+}
+
+.player-score,
+.computer-score {
+    flex: 1;
+}
+
+.player-score h2,
+.computer-score h2 {
+    color: #00ff88;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.player-score p,
+.computer-score p {
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.game-status {
+    flex: 1;
+    color: #ffaa00;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ffaa00;
+}
+
+#pongCanvas {
+    display: block;
+    margin: 20px auto;
+    background: #000;
+    border: 3px solid #00ff88;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #00ff88;
+    cursor: none;
+}
+
+.controls {
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 0.9em;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 3px solid #00ff88;
+}
+
+.controls p {
+    margin: 5px 0;
+}
+
+.controls strong {
+    color: #00ff88;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    #pongCanvas {
+        width: 100%;
+        height: auto;
+    }
+
+    .scoreboard {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .game-status {
+        margin-top: 10px;
+    }
+}
